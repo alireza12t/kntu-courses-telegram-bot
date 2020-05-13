@@ -63,12 +63,12 @@ def download_resource(browser, link):
 
 
 def open_courses_login(browser):
-    if not browser.current_url.startswith('https://courses.kntu.ac.ir/login/index.php'):
-        browser.get('https://courses.kntu.ac.ir/login/index.php')
+    if not browser.current_url.startswith('https://courses.aut.ac.ir/login/index.php'):
+        browser.get('https://courses.aut.ac.ir/login/index.php')
 
 
 def open_course_home(browser):
-    browser.get('https://courses.kntu.ac.ir')
+    browser.get('https://courses.aut.ac.ir')
 
 
 def login(browser, username_input, password_input):
