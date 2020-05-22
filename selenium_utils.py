@@ -13,6 +13,10 @@ download_path = os.getcwd() + '/downloads/'
 
 def setup_selenium():
     opts = webdriver.ChromeOptions()
+#    opts.add_argument('user-agent = Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36')
+    driver = webdriver.Chrome(executable_path=r'/Users/reza/Desktop/Courses/kntu-courses-telegram-bot/chromedriver')
+#    chrome_options=opts,
+    driver.get('http://google.com/')
     opts.headless = True
     preferences = {"browser.helperApps.neverAsk.saveToDisk": "application/pdf",
                    'download.default_directory': download_path,
@@ -63,12 +67,12 @@ def download_resource(browser, link):
 
 
 def open_courses_login(browser):
-    if not browser.current_url.startswith('https://courses.kntu.ac.ir/login/index.php'):
-        browser.get('https://courses.kntu.ac.ir/login/index.php')
+    if not browser.current_url.startswith('https://courses.aut.ac.ir/login/index.php'):
+        browser.get('https://courses.aut.ac.ir/login/index.php')
 
 
 def open_course_home(browser):
-    browser.get('https://courses.kntu.ac.ir')
+    browser.get('https://courses.aut.ac.ir')
 
 
 def login(browser, username_input, password_input):

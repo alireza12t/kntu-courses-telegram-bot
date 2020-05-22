@@ -14,7 +14,7 @@ def main():
 
 
 def setup_bot():
-    updater = Updater('BOT_TOKEN', use_context=True)
+    updater = Updater('1125216990:AAFSzmDGvv06yMcmCi69no7NdHhGSmHPEHg', use_context=True)
 
     dp = updater.dispatcher
 
